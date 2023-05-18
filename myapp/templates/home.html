@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Home Page</h1>
+        <a class="btn" href="{% url 'form' %}">Go to Form</a>
+    </div>
+</body>
+<body>
+    <div class="container">
+    <h1>Welcome to the Home Page</h1>
+    <a class="btn" href="{% url 'messages' %}">Go to Messages</a>
+    </div>
+</body>
+</html>

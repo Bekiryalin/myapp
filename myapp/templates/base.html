@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MyApp{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+                <li><a href="{% url 'form' %}">Form</a></li>
+                <li><a href="{% url 'messages' %}">Mesajlar</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Çıkış Yap</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Giriş Yap</a></li>
+                    <li><a href="{% url 'register' %}">Kayıt Ol</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        &copy; 2023 MyApp. Tüm hakları saklıdır.
+    </footer>
+</body>
+</html>
